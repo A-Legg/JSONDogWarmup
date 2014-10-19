@@ -44,6 +44,64 @@ $(document).ready(function () {
       }
     ]
   };
-  // Write come code to add the dogs to the table !!!!
+
+  var createDogs = function(dog) {
+    row = "<tr>";
+    row += "<td>" + dog.owner + "</td>";
+    row += "<td>" + dog.name + "</td>";
+    row += "<td>" + dog.preferences[0].favoriteFood + "</td>";
+    row += "<td>" + dog.preferences[1].favoriteToy + "</td>";
+    return row
+
+  };
+
+  $(gschoolDogs.dogs).each(function() {
+    $('#dogs').append(createDogs(this));
+  });
+
+
+
+
+//$.each(gschoolDogs, function( i, val) {
+//  $.each(val, function(i, val2) {
+//    $('.owner').append('<tr><td>' + val2['owner'] + '</td></tr>');
+//
+//  })
+//
+//})
+//
+//  $.each(gschoolDogs, function( i, val) {
+//    $.each(val, function(i, val2) {
+//      $('.name').append('<tr><td>' + val2['name'] + '</td></tr>');
+//
+//    })
+//
+//  })
+//
+//  $.each(gschoolDogs, function( i, val) {
+//    $.each(val, function(i, val2) {
+//      $.each(val2, function(i, val3) {
+//        $('food').append('<tr><td>' + val3[0]['favoriteFood'] + '</td></tr>');
+//        console.log(val3[0]['favoriteFood']);
+//      })
+//
+//    })
+//
+//  })
+
+
+
+//  $.each(gschoolDogs, function( i, val) {
+//    $.each(val, function(i, val2) {
+//      $('food').append('<tr><td>' + val2['preferences'][0]['favoriteFood'] + '</td></tr>');
+//      console.log(val2['preferences'][0]);
+//    })
+//
+//  })
+
+
+
+//  console.log(gschoolDogs['dogs'][0]["name"]);
+
 });
 
